@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -56,32 +57,32 @@
       <legend class="catalog-filter-title">Инфраструктура:</legend>
 
      <ul class="catalog-filter-list">
-       <il class="catalog-filter-item">
+       <li class="catalog-filter-item">
          <label class="control">
         <input class="control-input" type="checkbox" name="swimming-pool" checked>
-        Бассейн</label></il>
-      <il><label class="control">
+        Бассейн</label></li>
+      <li><label class="control">
         <input class="control-input" type="checkbox" name="parking" checked>
-        Парковка</label></il>
-      <il><label class="control">
+        Парковка</label></li>
+      <li><label class="control">
         <input class="control-input" type="checkbox" name="wi-fi">
-        Wi-Fi</label></il></ul>
+        Wi-Fi</label></li></ul>
     </fieldset>
 
     <fieldset class="catalog-filter-group">
       <legend class="catalog-filter-title">Тип жилья:</legend>
 
       <ul class="catalog-filter-list">
-        <il class="catalog-filter-item">
+        <li class="catalog-filter-item">
           <label class="control">
          <input class="control-input" type="radio" name="housing" value="hotel" checked>
-         Гостиница</label></il>
-       <il><label class="control">
+         Гостиница</label></li>
+       <li><label class="control">
          <input class="control-input" type="radio" name="housing" value="motel">
-         Мотель</label></il>
-       <il><label class="control">
+         Мотель</label></li>
+       <li><label class="control">
          <input class="control-input" type="radio" name="housing" value="apartments">
-         Апартаменты</label></il></ul>
+         Апартаменты</label></li></ul>
     </fieldset>
       <ul class="button list">
         <li class="button-submit"><button class="button" type="submit">Применить</button></li>
@@ -91,22 +92,24 @@
 
   <h2 class="find-hotel">Найдено гостиниц:</h2>
   <select class="select-control">
-    <option value="cheap">Сначала дешёвые</option>
+    <option value="cheap" selected>Сначала дешёвые</option>
     <option value="popular">Сначала популярное</option>
     <option value="expensive">Сначала дорогое</option>
   </select>
-  <a class="button button-tile" href="#">
-    <span class="visually-hidden">Показать плиткой</span>
-  </a>
-    
-  <a class="button button-sketch" href="#">
-    <span class="visually-hidden">Показать эскизом</span>
-  </a>
-    
-  <a class="button button-list" href="#">
-    <span class="visually-hidden">Показать списком</span>
-  </a>
-    
+  <ul class="button-list-view">
+    <li class="button button-tile">
+      <button class="visually-hidden" type="button">Показать плиткой</button>
+    </li>
+      
+    <li class="button button-sketch">
+      <button class="visually-hidden" type="button">Показать эскизом</button>
+    </li>
+      
+    <li class="button button-list">
+      <button class="visually-hidden" type="button">Показать списком</button>
+    </li>
+  </ul>
+
   <ul class="hotel-list">
     <li class="hotel-card">
       <a class="hotel-card-link" href="hotel.html">
@@ -175,10 +178,6 @@
   <button class="load-more" type="button">Загрузить ещё</button>
 
   <ul class="pagination">
-    <li class="pagination-item"></li>
-      <a class="pagination-link pagination-prev pagination-disabled">
-        <span class="visually-hidden">Предыдущая страница</span>
-      </a>
     <li class="pagination-item">
       <a class="pagination-link pagination-current">1</a>
     </li>
