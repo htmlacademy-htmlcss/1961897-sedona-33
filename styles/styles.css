@@ -1,0 +1,391 @@
+@font-face {
+    font-family:"Pt Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family:"Pt Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+body {
+    font-family:"Pt Sans", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: black;
+    background-color: white;
+}
+
+.page-header {
+    color: black;
+    background-color: white;
+}
+
+/* шапка с навигацией */
+
+.navigation-link {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+}
+
+.navigation-search .navigation-link {
+    color: white;
+    background-color: #756257;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+/* СЕДОНА описание */
+
+}
+.main-index {
+    color: black;
+    background-color: white;
+    background-image:  url("./images/head/index-background.jpg");
+    background-repeat: no-repeat;
+}
+
+.header {
+    text-align: center;
+    line-height: 36px;
+    }
+
+.header-main {
+    
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    }
+.five-reasons {
+    font-weight: 400;
+    font-size: 22px;
+    color: #333333;
+}
+
+/* Настоящий городок №1 */
+
+.reason-one {
+    color: white;
+    background-color: #83B3D3;
+    text-align: center;
+}
+
+.real-city {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    
+}
+
+/*  Жилье, еда, сувениры */
+
+.service {
+    text-align: center;
+}
+
+.service-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    background-color: white;
+}
+
+/* Мост дьявола №2 */
+
+.reason-two {
+    color: white;
+    background-color: #83B3D3;
+    text-align: center;
+}
+
+.devils-bridge {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    
+}
+
+/*  преимущества №3 №4 №5 */
+
+.advantages {
+    text-align: center;
+}
+
+.advantages-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    background-color: white;
+}
+
+/* ЗАИНТЕРЕСОВАЛИСЬ */
+
+.intresting {
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+.intresting-header {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    
+}
+.intresting-link {
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 700;
+    color: white;
+    background-color: #756257;
+    text-transform: uppercase;
+}
+
+/* ПОДПИШИТЕСЬ НА РАССЫЛКУ */
+
+.section-footer {
+    color: white;
+    background-color: #83B3D3;
+}
+
+.distribution {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    color: white;
+    background-color: #83B3D3;
+    text-transform: uppercase;
+}
+.catalog-distribution {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    color: black;
+    background-color: white;
+    text-transform: uppercase;
+}
+
+.catalog-distribution-description {
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 400;
+    color: black;
+    background-color: white;
+}
+
+.distribution-description {
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 400;
+    color: white;
+    background-color: #83B3D3;
+    }
+
+/* Телефон и ссылка на Академию */
+
+.contact-phone {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 400;
+    color: black;
+    background-color: white;
+    
+}
+
+.field {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: black;
+}
+
+.button-subscribe {
+    text-align: center;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    color: white;
+    background-color: #83B3D3;
+    text-transform: uppercase;
+}
+input[placeholder]{
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+/* стилизация catalog */
+/* шапка */
+.inner-header {
+    color: white;
+    background-color: #3F5E72;
+}
+
+.inner-header-title {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 78px;
+}
+
+/* фильтр гостиниц */
+
+.breadcrumbs-link {
+    color: white;
+    background-color: #3F5E72;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.catalog-filter {
+    color: white;
+    background-color: #3F5E72;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.catalog-filter-item {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.button-submit{
+    text-align: center;
+    color: white;
+    background-color: #83B3D3;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.button-reset{
+    text-align: center;
+    color: white;
+    background-color: #83B3D3;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    }
+
+/* Блок с сортировкой гостиниц */
+
+.find-hotel {    
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+    text-transform: uppercase;
+}
+
+.select-control {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+/* Карточки с гостиницами */
+
+.hotel-card-link {text-decoration: none;}
+
+.hotel-card-title { 
+    color: black;
+    background-color: white;   
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    }
+
+li span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+}
+.hotel-more-button {
+    color: white;
+    background-color: #756257;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+.hotel-favorite-button {
+    color: white;
+    background-color: #83B3D3;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.rating {
+    color: black;
+    background-color: #F2F2F2;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.load-more {
+    font-family: "Pt Sans" sans-serif;
+    color: white;
+    background-color: #83B3D3;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* страницы */
+
+.pagination-link {
+    background-color: #83B3D3;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.pagination-current {
+    color: black;
+    background-color: #F2F2F2;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.hotel-on-page {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    
+}
+
+.select-page-hotel {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+}
