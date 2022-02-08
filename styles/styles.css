@@ -28,13 +28,16 @@ body {
     line-height: 21px;
     color: #000000;
     background-color: #FFFFFF;
-}
-
-.main-conteiner {
     flex-grow: 1;
     width: 1200px;
     margin: 0 auto;
 }
+
+/* .main-conteiner {
+    flex-grow: 1;
+    width: 1200px;
+    margin: 0 auto;
+} */
 
 .page-header {
     color: #000000;
@@ -102,7 +105,7 @@ body {
     }
 
 .header-main {
-    
+    margin-top: 120px;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 30px;
@@ -122,6 +125,11 @@ body {
     background-color: #83B3D3;
     text-align: center;
 }
+.block-description {
+    width: 400px;
+    padding-top: 98px;
+
+}
 
 /* .reason-one h3,p {
     display: block;
@@ -140,15 +148,19 @@ body {
 /*  Жилье, еда, сувениры */
 .service-list {
     display: flex;
+    margin: 0;
 }
 .service-item {
     width: 400px;
-    height: 384px;
+    list-style-type: none;
+    
 }
 
 
 .service {
     text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .service-title {
@@ -171,10 +183,13 @@ body {
 }
 .advantages-list {
     display: flex;
+    list-style-type: none;
+    padding: 0px;
+    margin: 70px 0;
 }
 .advantages-item {
     width: 400px;
-    height: 384px;
+    
 }
 
 .devils-bridge {
@@ -188,6 +203,7 @@ body {
 
 .advantages {
     text-align: center;
+
 }
 
 .advantages-title {
@@ -206,6 +222,7 @@ body {
     text-align: center;
     color: #000000;
     background-color: #FFFFFF;
+    padding: 90px 0;
 }
 .intresting-header {
     font-weight: 700;
@@ -227,7 +244,6 @@ body {
 ПОДПИШИТЕСЬ НА РАССЫЛКУ */
 
 .page-footer {
-    width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
@@ -247,14 +263,13 @@ body {
     color: #FFFFFF;
     background-color: #83B3D3;
     background-image: url(../images/footer/background-footer.jpg);
+    padding: 100px 0;
 }
 
 .distribution {
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
-    color: #FFFFFF;
-    background-color: #83B3D3;
     text-transform: uppercase;
 }
 .catalog-distribution {
@@ -278,8 +293,7 @@ body {
     font-size: 20px;
     line-height: 36px;
     font-weight: 400;
-    color: #FFFFFF;
-    background-color: #83B3D3;
+
     }
 
 /* Телефон и ссылка на Академию */
@@ -299,7 +313,6 @@ body {
     font-weight: 400;
     color: #000000;
     background-color: #FFFFFF;
-    
 }
 
 .field {
@@ -330,6 +343,9 @@ input[placeholder]{
 .inner-header {
     color: #FFFFFF;
     background-color: #3F5E72;
+    background-image: url(../images/head/catalog-background.jpg);
+    padding-left: 71px;
+    
 }
 
 .inner-header-title {
@@ -361,8 +377,6 @@ input[placeholder]{
 
 
 .catalog-filter {
-    color: #FFFFFF;
-    background-color: #3F5E72;
     font-weight: 700;
     font-size: 20px;
     line-height: 26px;
@@ -406,6 +420,7 @@ input[placeholder]{
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
+    margin-left: auto;
 }
 
 /* блок с поиском гостиниц */
@@ -413,20 +428,27 @@ input[placeholder]{
     display: flex;
     width: 1057px;
     margin-left: 71px;
+    align-items: center;
 }
 
 .button-list-view {
     width: 160px;
-    margin: 0 auto;
+    padding: 0;
+    margin-left: 81px;
 }
-.find-hotel {
-    margin-right: 191px;
-}
+
 /* Карточки с гостиницами */
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
 
 .hotel-list {
     display: flex;
     width: 1058px;
+    flex-wrap: wrap;
+    margin-left: 70px;
 }
 .hotel-card {
     width: 299px;
@@ -444,10 +466,10 @@ input[placeholder]{
     }
 
 /* загрузить ещё */
-/* .load-more {
-    
-    align-self: center;
-} */
+ .load-more {
+     display: block;
+     margin: 0 auto;    
+} 
 
 li span {
     font-weight: 400;
