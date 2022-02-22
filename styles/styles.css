@@ -43,11 +43,6 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-/* .main-conteiner {
-    flex-grow: 1;
-    width: 1200px;
-    margin: 0 auto;
-} */
 
 .page-header {
     color: #000000;
@@ -304,7 +299,7 @@ body {
 
 .catalog-distribution-description {
     font-size: 20px;
-    line-height: 36px;
+    line-height: 26px;
     font-weight: 400;
     color: #000000;
     background-color: #FFFFFF;
@@ -480,22 +475,43 @@ input[placeholder]{
 }
 
 /* Карточки с гостиницами */
-.list-reset {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
 
 .hotel-list {
-    display: flex;
+    display: grid;
     width: 1058px;
-    flex-wrap: wrap;
-    margin-left: 70px;
+    grid-template-columns: repeat(3, 339px);
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    gap: 10px;
 }
+/* сетка самих карточек */
+
 .hotel-card {
-    width: 299px;
+    display: grid;
+    width: 339px;
+    grid-template-columns: 139px 160px;
+    row-gap: 16px;
     margin: 20px;
 }
+.hotel-card-link {
+    grid-column: 1/-1;
+}
+.stars {
+    display: flex;
+    padding: 0;
+    align-items: center;
+    }
+.star {
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/index/Star.svg);
+
+}    
+
+
 .hotel-card-type {
     min-width: 134px;
 }
@@ -508,6 +524,7 @@ input[placeholder]{
     font-weight: 700;
     font-size: 24px;
     line-height: 31px;
+    margin: 0;
     }
 
 /* загрузить ещё */
@@ -515,29 +532,40 @@ input[placeholder]{
      display: block;
      margin: 0 auto;    
 } 
-
+.load-more-box {
+    margin: 30px 218px;
+}
 li span {
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
 }
+.hotel-price {
+    margin-left: 15px;
+}
 .hotel-more-button {
     color: #FFFFFF;
     background-color: #756257;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 21px;
-    text-transform: uppercase;
+    margin-right: 12px;
+
 }
 .hotel-favorite-button {
     color: #FFFFFF;
     background-color: #83B3D3;
+    margin-left: 13px;
+}
+.hotel-more-button,
+.hotel-favorite-button  {
     font-weight: 700;
     font-size: 16px;
     line-height: 21px;
     text-transform: uppercase;
-}
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
 
+}
 .rating {
     color: #000000;
     background-color: #F2F2F2;
@@ -545,6 +573,9 @@ li span {
     font-size: 16px;
     line-height: 21px;
     text-transform: uppercase;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
 }
 
 .load-more {
