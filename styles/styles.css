@@ -79,14 +79,13 @@ body {
     margin-left: auto;
 
 }
-.navigation-search .navigation-link {
+/* .navigation-search .navigation-link {
     min-width: 23px;
     min-height: 27px;
-}
+    
+} */
 
 .navigation-link {
-    position: relative;
-    display: block;
     font-size: 20px;
     line-height: 26px;
     font-weight: 700;
@@ -94,10 +93,10 @@ body {
     color: #000000;
     background-color: #FFFFFF;
     text-decoration: none;
+    
     }
 
-.navigation-search .navigation-item:nth-of-type(3) .navigation-link{
-    display: block;
+.button-general {
     color: #FFFFFF;
     background-color: #756257;
     font-size: 16px;
@@ -107,39 +106,43 @@ body {
     border-radius: 5px;
     width: 160px;
     }
+.navigation-list:nth-child(3) .button-general {
+    padding: 9px 32px;
 
+}
 .navigation-icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     margin: auto;
     fill: #000000;
 }
 /* BUTTONS effects */
-.navigation-icon-effect:hover {
+
+.navigation-link:hover,
+.navigation-link:hover .navigation-icon {
     fill: #756257; 
     color: #756257;
 }
-.navigation-icon-effect:active {
-    fill: rgba(117, 98, 87, 0.3); 
+.navigation-link:active,
+.navigation-link:active .navigation-icon {
+    fill: rgba(117, 98, 87, 0.3);
     color: rgba(117, 98, 87, 0.3);
+    box-shadow: none;
 }
-/*  */
-.navigation-search .navigation-item:nth-of-type(3) .navigation-link:hover {
+.button-general:hover {
     background-color: #615048;
+    color: #FFFFFF;
 }
-.navigation-search .navigation-item:nth-of-type(3) .navigation-link:focus {
-    background: #615048;
+.button-general:focus {
     box-shadow: inset 0 0 0 3px #83B3D3;
+    border-radius: 4px;
     outline: none;
 }
-.navigation-search .navigation-item:nth-of-type(3) .navigation-link:active {
+.button-general:active {
     background-color: #615048;
     color: rgba(255, 255, 255, 0.3);
     box-shadow: none;
+    outline: none;
 }
+
 /* СЕДОНА описание */
 
 .main-index {
@@ -230,8 +233,7 @@ body {
     line-height: 28px;
     text-align: center;
     text-transform: uppercase;
-
-    
+  
 }
 
 /* Мост дьявола №2 */
@@ -291,9 +293,6 @@ body {
     font-size: 20px;
     line-height: 36px;
     font-weight: 700;
-    color: #FFFFFF;
-    background-color: #756257;
-    text-transform: uppercase;
     text-decoration: none;
     display: block;
     margin: 0 auto;
@@ -336,11 +335,16 @@ body {
     padding: 0;
     list-style-type: none;
 }
-.button-social {
+/* бокс для социальных сетей  */
+.footer-social-link {
     position: relative;
-    display: block;
-    padding-right: 40px;
-    text-align: center;
+    display:inline-block;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    
 }
 .button-icon-social {
     position: absolute;
@@ -350,12 +354,14 @@ body {
     left: 0;
     margin: auto;
     fill: #83B3D3;
+   
+    
 }
 
-.button-icon-social:hover {
+.footer-social-link:hover .button-icon-social {
     fill: #68A2CA;
 }
-.button-icon-social:focus {
+.footer-social-link:focus {
     box-shadow: inset 0 0 0 3px #83B3D3;
     border-radius: 10px;
 }
@@ -365,6 +371,12 @@ body {
     background-color: #83B3D3;
     background-image: url(../images/footer/background-footer.jpg);
     padding: 86px 0;
+}
+.section-footer-catalog {
+    background-color: #ffffff;
+    color: #000000;
+    background-image: none;
+    
 }
 
 .distribution {
@@ -412,20 +424,26 @@ body {
     padding: 19px 23px;
 }
 
-.contact-phone:hover,.button-html-academy:hover{
+.contact-phone:hover,
+.html-academy-link:hover .button-html-academy{
     fill: rgba(117, 98, 87, 1);
     color: rgba(117, 98, 87, 1);
 }
-.contact-phone:focus,.button-html-academy:focus{
+.contact-phone:focus,
+.html-academy-link:focus{
     box-shadow: inset 0 0 0 3px #83B3D3;
     border-radius: 10px;
     outline: none;
 }
-.contact-phone:active,.button-html-academy:active{
+.html-academy-link:active{
+    box-shadow: none;
+}
+.contact-phone:active,
+.html-academy-link:active .button-html-academy{
     fill: rgba(117, 98, 87, 0.3); 
     color: rgba(117, 98, 87, 0.3); 
-    box-shadow: none;
     outline: none;
+    box-shadow: none;
 }
 .footer-html-academy {
     max-width: 120px;
@@ -436,13 +454,14 @@ body {
 }
 
 .contact-phone {
+    
     font-size: 40px;
     line-height: 40px;
     font-weight: 400;
     color: #000000;
     background-color: #FFFFFF;
     text-decoration: none;
-    padding: 15px;
+    padding: 18px;
 }
 
 .field {
@@ -472,6 +491,7 @@ body {
     cursor: pointer;
 }
 input[placeholder]{
+    background-color: #F2F2F2;
     font-size: 18px;
     line-height: 26px;
     font-weight: 400;
@@ -595,10 +615,50 @@ input[placeholder]{
 }
 .button-list-view {
     display: flex;
-    width: 160px;
+    width: 180px;
     padding: 0;
     margin: 0;
     list-style-type: none;
+    justify-content: end;
+}
+.button-item {
+    width: 48px;
+    height: 48px;
+    }
+.button-item:not(:last-child) {
+    margin-right: 8px;
+}
+.card-grid-toggle {
+    display: block;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 14px;
+    box-shadow: inset 0 0 0 2px #E6E6E6;
+    border-radius: 4px;
+}
+.card-grid-toggle:hover {
+    box-shadow: inset 0 0 0 2px #83B3D3;
+    border-radius: 4px;
+}
+.card-grid-toggle:focus {
+    box-shadow: inset 0 0 0 2px #83B3D3;
+    border-radius: 4px;
+    outline: none;
+}
+.card-grid-toggle:active {
+    box-shadow: inset 0 0 0 2px #000000;
+    border-radius: 4px;
+}
+
+.button-tile {
+    background-image: url(../images/index/mode-tile\ 1.svg);
+}
+.button-sketch {
+    background-image: url(../images/index/mode-slideshow\ 1.svg)
+}
+.button-lists {
+    background-image: url(../images/index/mode-list\ 1.svg);
 }
 
 /* Карточки с гостиницами */
