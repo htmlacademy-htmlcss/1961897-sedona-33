@@ -53,7 +53,7 @@ body {
 
 .container {
     margin: 0 auto;
-    width: 1062px;
+    width: 1058px;
 }
 .logo {
     line-height: 0;
@@ -85,7 +85,6 @@ body {
 .navigation-search .navigation-item {
     padding: 0;   
     padding-left: 27px;
-    
 }
 
 .navigation-link {
@@ -97,8 +96,9 @@ body {
     background-color: #FFFFFF;
     text-decoration: none;
     
-    }
-.like {
+}
+.for-like::after {
+    content: "12";
     color: #ffffff;
     position: absolute;
     display: inline-flex;
@@ -111,22 +111,22 @@ body {
     background-color: #7DB54F;
     justify-content: center;
     align-items: center;
+    top:-6px;
     right: -15px;
-    top: -6px;
     border: none;
 }
+
 .button-general {
     color: #FFFFFF;
     background-color: #756257;
     font-size: 16px;
-    /* line-height: 20px; */
     text-transform: uppercase;
     padding: 9px 0;
     border-radius: 5px;
     width: 160px;
     }
 .navigation-list:nth-child(3) .button-general {
-    padding: 9px 38px;
+    display: inline-block;
 
 }
 .navigation-icon {
@@ -164,28 +164,34 @@ body {
 /* СЕДОНА описание */
 
 .main-index {
+    position: relative;
     color: #000000;
     background-color: #FFFFFF;
     background-image:  url("../images/head/index-background.jpg");
     background-repeat: no-repeat;
 }
-.white-bottom-border {
-    position: relative;
-    bottom: 27px;
-}
+
 /* логотип на фоне */
 .logo-welcome-sedona {
     display: block;
     margin: 52px auto;
 }
-
+.for-mask::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 57px;
+    background-image: url("../images/head/divider.png");
+    background-repeat: no-repeat;
+    top: 430px; 
+}
 .header {
     text-align: center;
     line-height: 36px;
     }
 
 .header-main {
-    margin-top: 27px;
+    margin-top: 140px;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 30px;
@@ -246,8 +252,7 @@ body {
 
 .service {
     text-align: center;
-    /* padding-top: 80px;
-    padding-bottom: 80px; */
+
 }
 
 .service-title {
@@ -257,7 +262,6 @@ body {
     text-align: center;
     text-transform: uppercase;
     margin: 19px auto;
-  
 }
 
 /* Мост дьявола №2 */
@@ -350,8 +354,10 @@ body {
 }
 .flex-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    margin-top: 36px;
+    margin-top: 29px;
+    justify-content: space-between;
 }
 
 .footer-social {
@@ -360,6 +366,7 @@ body {
 
 .footer-social-list {
     display: flex;
+    flex-wrap: nowrap;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -383,8 +390,7 @@ body {
     left: 0;
     margin: auto;
     fill: #83B3D3;
-   
-    
+      
 }
 
 .footer-social-link:hover .button-icon-social {
@@ -416,7 +422,10 @@ body {
     line-height: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-top: 57px;
+    margin-top: 49px;
+}
+.distribution-index {
+    margin-top: 97px;
 }
 .distribution-form {
     display: flex;
@@ -442,7 +451,7 @@ body {
 }
 
 .distribution-description {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 28px;
     font-weight: 400;
     margin-bottom: 50px;
@@ -502,7 +511,7 @@ body {
     }
 
 .footer-tel {
-    width: 100%;
+    width: 720px;
     margin-left: 30px;
 }
 
@@ -543,11 +552,10 @@ body {
     border-radius: 0 10px 10px 0;
     cursor: pointer;
 }
-input[placeholder]{
+.distribution-form .field[placeholder]{
     background-color: #F2F2F2;
     font-size: 18px;
     line-height: 26px;
-    font-weight: 400;
     padding-left: 22px;
 }
 
@@ -583,6 +591,7 @@ input[placeholder]{
 .breadcrumbs {
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
 }
 .breadcrumbs-item {
@@ -598,8 +607,6 @@ input[placeholder]{
     line-height: 21px;
     text-decoration: none;
     padding: 2px 6px;
-
-
 }
 .breadcrumbs-link:hover {
     color: rgba(255, 255, 255, 0.6);
@@ -637,9 +644,10 @@ input[placeholder]{
 /* создание флекса фильтра */
 .block-catalog-filter {
     display: flex;
-    margin-top: 43px;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
-div .catalog-filter-group:nth-of-type(3) {
+.catalog-filter-group:nth-of-type(3) {
     margin-left: 86px;
 }
 .catalog-filter-group {
@@ -796,7 +804,6 @@ div .catalog-filter-group:nth-of-type(3) {
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
-    
 }  
 .range-input {
     color: #FFFFFF;
@@ -806,12 +813,13 @@ div .catalog-filter-group:nth-of-type(3) {
     height: 44px;
     background-color: transparent;
     border: 2px solid #FFFFFF;
-        /* outline: none; */
+    -webkit-appearance: textfield;
 }
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   appearance: none;
-  margin: 0;
+  -webkit-appearance: none;
+   margin: 0;
 }
 .catalog-filter-label:first-child .range-input{
     border-radius: 4px 0px 0px 4px;
@@ -832,14 +840,7 @@ div .catalog-filter-group:nth-of-type(3) {
     box-shadow: none;
     border-color: #ffffff;
 }
-.min-price {
-    position: absolute;
-    opacity: 0.3;
-    right: 13px;
-    top: 12px;
-    
-}
-.max-price {
+.min-price,.max-price {
     position: absolute;
     opacity: 0.3;
     right: 13px;
@@ -1165,9 +1166,11 @@ li span {
     }
 .pagination {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style-type: none;
+    margin-right: 70px;
 }
 .pagination-link:hover {
     background-color: #68A2CA;
@@ -1181,14 +1184,15 @@ li span {
 }
 
 .pagination-item:not(:first-child) {
-    margin-left: 8px;   
+    margin-left: 8px;
+    margin-bottom: 8px;   
 }
 
 .pagination-link {
     display: block;
     box-sizing: border-box;
-    width: 55px;
-    height: 55px;
+    min-width: 55px;
+    min-height: 55px;
     padding: 14px 16px;
     background-color: #83B3D3;
     color: #FFFFFF;
@@ -1314,6 +1318,13 @@ li span {
     border: none;
     cursor: pointer;
 }
+.field-base[placeholder] {
+    background-color: #F2F2F2;
+    font-size: 18px;
+    line-height: 26px;
+    padding-left: 22px;
+}
+
 .field-base:hover {
     background-color: #E6E6E6;
 }
@@ -1488,7 +1499,7 @@ li span {
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
 }
-.tooltip-text:after {
+.tooltip-text::after {
     content:'';
     background-image: url("../images/modal/pyramid.svg");
     width: 19px;
