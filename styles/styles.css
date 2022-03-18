@@ -212,7 +212,13 @@ body {
     text-align: center;
 }
 .reason-number {
-    margin: 29px auto;
+    margin: 30px auto;
+}
+.reason-description {
+    display: block;
+    width: 220px;
+    min-height: 63px;
+    margin: 0 auto;
 }
 .block-description {
     width: 400px;
