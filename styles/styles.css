@@ -212,7 +212,19 @@ body {
     text-align: center;
 }
 .reason-number {
-    margin: 29px auto;
+    margin: 30px auto;
+}
+.reason-description {
+    display: block;
+    width: 220px;
+    min-height: 63px;
+    margin: 0 auto;
+}
+.service-description {
+    display: block;
+    width: 250px;
+    min-height: 73px;
+    margin: 0 auto;
 }
 .block-description {
     width: 400px;
@@ -238,7 +250,7 @@ body {
     width: 400px;
     list-style-type: none;
     padding-top: 86px;
-    padding-bottom: 84px;
+    padding-bottom: 76px;
 }
 .service-description,.advantages-description {
     margin-bottom: 0;
@@ -1511,7 +1523,7 @@ img {
     display: none;
 }
 .message-input {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 55px;
 }
