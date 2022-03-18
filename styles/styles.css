@@ -1511,7 +1511,7 @@ img {
     display: none;
 }
 .message-input {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 55px;
 }
