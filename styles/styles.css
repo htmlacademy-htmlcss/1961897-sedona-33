@@ -220,6 +220,12 @@ body {
     min-height: 63px;
     margin: 0 auto;
 }
+.service-description {
+    display: block;
+    width: 250px;
+    min-height: 73px;
+    margin: 0 auto;
+}
 .block-description {
     width: 400px;
     padding-top: 98px;
@@ -244,7 +250,7 @@ body {
     width: 400px;
     list-style-type: none;
     padding-top: 86px;
-    padding-bottom: 84px;
+    padding-bottom: 76px;
 }
 .service-description,.advantages-description {
     margin-bottom: 0;
