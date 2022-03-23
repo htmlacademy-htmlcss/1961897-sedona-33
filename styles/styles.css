@@ -22,7 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  width: 1200px;
+  width: 1280px;
   min-height: 100%;
   margin: 0 auto;
   font-family: "Pt Sans", sans-serif;
@@ -30,6 +30,14 @@ body {
   line-height: 21px;
   color: #000000;
   background-color: #ffffff;
+}
+
+.shadow {
+  display: block;
+  width: 1200px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
@@ -52,23 +60,30 @@ body {
 
 .container {
   position: relative;
-  width: 1058px;
+  width: 1068px;
   margin: 0 auto;
+}
+
+.container-catalog {
+  margin: 0 5px;
 }
 
 .logo {
   line-height: 0;
+  z-index: 1;
 }
 
 .navigation {
   display: flex;
   width: 1060px;
   margin: 0 auto;
+  align-items: center;
 }
 
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 550px;
   margin: 0;
   padding-left: 31px;
   align-items: center;
@@ -81,13 +96,19 @@ body {
 }
 
 .navigation-search {
+  display: flex;
+  flex-wrap: wrap;
   max-width: 300px;
   margin-left: auto;
+  list-style-type: none;
 }
 
 .navigation-search .navigation-item {
   padding: 0;
-  padding-left: 21px;
+}
+
+.navigation-search .navigation-item:not(:last-child) {
+  margin-right: 21px;
 }
 
 .navigation-link {
@@ -121,8 +142,8 @@ body {
 
 .button-general {
   width: 160px;
-  padding: 6px 0;
   margin-left: 12px;
+  padding: 9px 34px;
   font-size: 16px;
   text-transform: uppercase;
   color: #ffffff;
@@ -130,10 +151,6 @@ body {
   border-radius: 5px;
 }
 
-.navigation-list:nth-child(3) .button-general {
-  display: inline-block;
-
-}
 .navigation-icon {
   margin: auto;
   fill: #000000;
@@ -152,6 +169,10 @@ body {
   fill: rgba(117, 98, 87, 0.3);
   color: rgba(117, 98, 87, 0.3);
   box-shadow: none;
+}
+
+.navigation-link:active .for-like::after {
+  color: #a4cb85;
 }
 
 .button-general:hover {
@@ -174,24 +195,32 @@ body {
 /* СЕДОНА описание */
 
 .main-index {
-  position: relative;
   color: #000000;
   background-color: #ffffff;
+}
+
+.head-fon {
+  position: relative;
+  top: -3px;
+  width: 100%;
+  height: 485px;
   background-image:  url("../images/head/index-background.jpg");
+  background-color: #41759d;
   background-repeat: no-repeat;
 }
 /* логотип на фоне */
 
 .logo-welcome-sedona {
   display: block;
-  margin: 52px auto;
+  margin: 0px auto;
+  padding-top: 52px;
 }
 .banner::after {
   position: absolute;
-  top: 430px;
+  top: 429px;
   content: "";
   width: 100%;
-  height: 57px;
+  height: 100%;
   background-image: url("../images/head/divider.png");
   background-repeat: no-repeat;
 }
@@ -201,7 +230,7 @@ body {
 }
 
 .header-main {
-  margin-top: 140px;
+  margin-top: 58px;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
@@ -232,11 +261,11 @@ body {
   width: 220px;
   min-height: 63px;
   margin: 0 auto;
+  padding-bottom: 50px;
 }
 .service-description {
   display: block;
   width: 250px;
-  min-height: 73px;
   margin: 0 auto;
 }
 .block-description {
@@ -256,6 +285,7 @@ body {
 
 .service-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -263,7 +293,7 @@ body {
 .service-item,.advantages-item {
   width: 400px;
   padding-top: 86px;
-  padding-bottom: 76px;
+  padding-bottom: 84px;
   list-style-type: none;
 }
 
@@ -343,7 +373,7 @@ body {
 }
 
 .intresting-header {
-  margin: 0;
+  margin-bottom: 30px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -353,7 +383,7 @@ body {
 .intresting-link {
   display: block;
   width: 575px;
-  margin: 0 auto;
+  margin: 55px auto 0;
   padding: 13px 0;
   font-size: 20px;
   line-height: 36px;
@@ -363,10 +393,11 @@ body {
 }
 
 .intresting-description {
-  margin-top: 28px;
-  margin-bottom: 55px;
+  margin: 0 auto;
+  margin-right: 7px;
   font-size: 22px;
   line-height: 26px;
+  text-align: center;
 }
 
 /* Начало футера
@@ -385,44 +416,39 @@ body {
 }
 
 .flex-container {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 29px;
+  margin-top: 28px;
   align-items: center;
   justify-content: space-between;
 }
 
 .footer-social {
-  width: 110px;
+  width: 130px;
 }
 
 .footer-social-list {
-  display: flex;
-  flex-wrap: nowrap;
+  width: 150px;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
 }
-
 /* бокс для социальных сетей  */
 
 .footer-social-link {
-  position: relative;
   display: inline-flex;
   width: 40px;
-  min-height: 40px;
-  align-items: center;
+  height: 40px;
+  border-radius: 10px;
   justify-content: center;
-  outline: none;
 }
 
 .button-icon-social {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+  align-self: center;
+  justify-content: center;
   fill: #83b3d3;
 }
 
@@ -432,7 +458,6 @@ body {
 
 .footer-social-link:focus {
   box-shadow: inset 0 0 0 3px #83b3d3;
-  border-radius: 10px;
 }
 
 .section-footer {
@@ -458,7 +483,7 @@ body {
 }
 
 .distribution-index {
-  margin-top: 97px;
+  margin-top: 93px;
   margin-bottom: 29px;
 }
 
@@ -503,7 +528,6 @@ body {
   display: inline-flex;
   width: 160px;
   min-height: 70px;
-  padding-left: 5px;
   align-items: center;
   justify-content: center;
 }
@@ -554,17 +578,18 @@ body {
 
 .footer-tel {
   width: 720px;
-  margin-left: 30px;
+  margin-left: 15px;
 }
 
 .field {
   width: 600px;
+  padding-left: 22px;
   box-sizing: border-box;
   font-size: 18px;
   line-height: 26px;
   font-weight: 400;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   border: none;
   border-radius: 10px 0 0 10px;
   cursor: pointer;
@@ -579,9 +604,9 @@ body {
   outline: none;
 }
 
-.field:focus:invalid {
+.field:invalid {
   outline: none;
-  background-color: #e6e6e6;
+  background-color: #ffffff;
   box-shadow: inset 0 0 0 2px #ff5757;
 }
 
@@ -601,16 +626,11 @@ body {
   cursor: pointer;
 }
 
-.distribution-form .field[placeholder]{
-  padding-left: 22px;
-  font-size: 18px;
-  line-height: 26px;
-  background-color: #f2f2f2;
-}
-
 /* стилизация каталога*/
 
 .inner-header {
+  position: relative;
+  top: -3px;
   min-height: 408px;
   color: #ffffff;
   background-image: url(../images/head/catalog-background.jpg);
@@ -622,7 +642,7 @@ body {
   line-height: 74px;
   font-weight: 700;
   margin: 0;
-  padding-top: 33px;
+  padding-top: 36px;
 }
 
 .navigation-link-current::before {
@@ -640,7 +660,7 @@ body {
 .breadcrumbs {
   position: absolute;
   top: 103px;
-  left: -4px;
+  left: 2px;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -714,10 +734,11 @@ body {
 }
 
 .range {
-  margin-top: 5px;
+  margin-top: 6px;
 }
 
 .catalog-filter-group {
+  width: 90px;
   margin: 0;
   padding: 0;
   border: none;
@@ -737,10 +758,9 @@ body {
 .button-list {
   text-align: center;
   list-style-type: none;
-  margin: 0;
   margin-top: 60px;
   margin-left: auto;
-  padding: 0;
+  padding-left: 1px;
 }
 
 .catalog-filter {
@@ -756,6 +776,7 @@ body {
 }
 
 .catalog-filter-item {
+  max-width: 100px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -1003,10 +1024,15 @@ body {
   text-transform: uppercase;
 }
 
+.find-hotel::after {
+  content: "38";
+  margin-left: 7px;
+}
+
 .container-control {
   width: 287px;
   min-height: 48px;
-  margin-left: 169px;
+  margin-left: 132px;
 }
 
 .select-control {
@@ -1048,6 +1074,7 @@ body {
 
 .button-list-view {
   display: flex;
+  flex-wrap: wrap;
   width: 180px;
   margin: 0;
   padding: 0;
@@ -1058,10 +1085,11 @@ body {
 .button-item {
   width: 48px;
   height: 48px;
+  margin: 4px;
 }
 
-.button-item:not(:last-child) {
-  margin-right: 8px;
+.button-item:last-child {
+  margin-right: 0;
 }
 
 .card-grid-toggle {
@@ -1184,6 +1212,7 @@ body {
 
 .hotel-card-type {
   min-width: 134px;
+  margin-bottom: 3px;
 }
 
 .hotel-card-link {
@@ -1198,7 +1227,7 @@ body {
 
 .hotel-card-title {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   font-size: 24px;
   line-height: 31px;
   font-weight: 700;
@@ -1222,7 +1251,7 @@ li span {
 }
 
 .hotel-price {
-  margin-left: 15px;
+  margin-left: 19px;
 }
 
 .hotel-more-button {
@@ -1307,6 +1336,7 @@ li span {
 
 .pagination-link:active {
   color: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
 }
 
 .pagination-item:not(:first-child) {
@@ -1381,12 +1411,13 @@ li span {
 .modal-content {
   display: flex;
   flex-wrap: wrap;
-  padding: 70px;
+  padding: 67px;
 }
 
 .modal-title {
   margin: 0;
   margin-bottom: 71px;
+  text-transform: uppercase;
 }
 
 .modal-container {
@@ -1419,7 +1450,7 @@ li span {
 }
 
 .field-group:not(:last-of-type){
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .field-date {
@@ -1607,8 +1638,8 @@ li span {
 
 .tooltip {
   position: absolute;
-  left: 54px;
-  top: 14px;
+  left: 56px;
+  top: 13px;
   width: 25px;
   height: 25px;
 }
